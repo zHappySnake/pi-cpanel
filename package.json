@@ -1,0 +1,25 @@
+{
+  "name": "pi-cpanel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zHappySnake/pi-cpanel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zHappySnake/pi-cpanel/issues"
+  },
+  "homepage": "https://github.com/zHappySnake/pi-cpanel#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "node-os-utils": "^1.3.7",
+    "socket.io": "^4.5.2"
+  }
+}
