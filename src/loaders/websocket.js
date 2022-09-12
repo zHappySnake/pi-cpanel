@@ -1,9 +1,12 @@
 const { Server } = require('socket.io')
 const server = require('./webserver').server
 
+const { getCpu, getMemory, getTemp } = require('../helpers/sysstats')
+
 const io = new Server(server)
 
-var connectedClients = 0;
+var connectedClients = 0
+
 module.exports.init = () => {
 
     io.on('connection', async(socket) => {
@@ -18,6 +21,16 @@ module.exports.init = () => {
 
         })
 
-    })
+        setInterval(async () => {
+            var cpu = await getCpu()
+            var mem = await getMemory()
+            var temp = await getTemp()
+        
+            socket.emit("cpu", cpu)
+            socket.emit("memory", mem)
+            socket.emit("temperature", temp)
+        
+        }, 500);
 
+    })
 }

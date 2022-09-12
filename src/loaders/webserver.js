@@ -18,13 +18,14 @@ function init() {
 
     app.use(express.json())
     app.use(express.urlencoded({ extended: true }))
+    app.use(express.static(path.join(__dirname, '../public/static/')))
     
     app.get('/', (req, res) => {
         res.sendFile(path.join(__dirname + '/../public/index.html'))
     })
 
-    server.listen(3000)
-    console.log("Listening at http://localhost:" + 3000)
+    server.listen(config.port)
+    console.log("Listening at http://localhost:" + config.port)
 
 }
 
