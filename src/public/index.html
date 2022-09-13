@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raspberry Pi</title>
+    <title>Raspberry Pi - Home</title>
 
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/animations.css">
@@ -21,23 +21,32 @@
 
             <hr>
 
-            <div class="card">
-                <i></i>
-                <p>Temperature: <br><span id="temp"></span></p>
+            <nav>
+                <span><a class="active" href="/">Home</a></span>
+                &nbsp;
+                <span><a href="/console">Console</a></span>
+                &nbsp;
+                <span><a href="https://github.com/zHappySnake/pi-cpanel" target="_blank">Help</a></span>
+            </nav>
+
+            <hr>
+
+            <div class="card thermometer">
+                <p>Temperature: <br><span id="temp"><br></span></p>
             </div>
 
-            <span id="8203">&#8203;</span>
+            &nbsp;
 
-            <div class="card">
+            <div class="card memory">
                 <i></i>
-                <p>Memory: <br><span id="memory"></span></p>
+                <p>Memory: <br><span id="memory"><br></span></p>
             </div>
 
-            <span id="8203">&#8203;</span>
+            &nbsp;
 
-            <div class="card">
+            <div class="card cpu">
                 <i></i>
-                <p>CPU: <br><span id="cpu"></span></p>
+                <p>CPU: <br><span id="cpu"><br></span></p>
             </div>
 
         </div>

@@ -24,6 +24,10 @@ function init() {
         res.sendFile(path.join(__dirname + '/../public/index.html'))
     })
 
+    app.get('/console', (req, res) => {
+        res.sendFile(path.join(__dirname + '/../public/console.html'))
+    })
+
     server.listen(config.port)
     console.log("Listening at http://localhost:" + config.port)
 

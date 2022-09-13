@@ -68,8 +68,41 @@ hr {
     }
 }
 
-.card i {
+.thermometer {
+    background-image: url('/img/thermometer/thermometer-low.svg');
+    background-repeat: no-repeat;
+    background-position: right;
 
-    z-index: -1;
+    background-size: 20%;
+}
 
+.cpu {
+    background-image: url('/img/cpu.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position: 95%;
+
+    background-size: 20%;
+}
+
+.memory {
+    background-image: url('/img/memory.svg');
+    background-repeat: no-repeat;
+    background-position: 95%;
+
+    background-size: 20%;
+}
+
+nav a {
+    color: gray;
+    text-decoration: none;
+}
+
+nav .active {
+    color: rgb(185, 185, 185);
+    cursor: default;
+}
+
+nav {
+    text-align: center;
 }
